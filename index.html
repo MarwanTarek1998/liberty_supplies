@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/all.min.css"/>
         <!-- Style css -->
         <link rel="stylesheet" href="css/style.css">
-    
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,77 +23,90 @@
 <body>
 
     <!-- poster -->
-    <div class="poster mw-100" >
-        <img src="poster.png" alt="poster" class="w-100">
+    <div class="poster mw-100 d-none d-md-block" >
+        <img src="imgs/poster.png" alt="poster" class="w-100">
     </div>
     <!-- poster -->
 
-    <!-- nav bar -->
+     <!-- nav bar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger my-4">
-        <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Department
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Hardware</a></li>
-                  <li><a class="dropdown-item" href="#">Paint and Paint Supplies</a></li>
-                  <li><a class="dropdown-item" href="#">Electrical</a></li>
-                  <li><a class="dropdown-item" href="#">Plumbing</a></li>
-                  <li><a class="dropdown-item" href="#">Lawn and Garden</a></li>
-                  <li><a class="dropdown-item" href="#">Sporting Goods and Camping</a></li>
-                  <li><a class="dropdown-item" href="#">BBQ and Grill</a></li>
-                  <li><a class="dropdown-item" href="#">Outdoor Living and Patio</a></li>
-                  <li><a class="dropdown-item" href="#">Closeouts</a></li>
-                  <li><a class="dropdown-item" href="#">Cleaning and Household Supplies</a></li>
-                  <li><a class="dropdown-item" href="#">Automotive</a></li>
-                  <li><a class="dropdown-item" href="#">Heating and Cooling</a></li>
-                  <li><a class="dropdown-item" href="#">Pool Supplies & Testing</a></li>
-                  <li><a class="dropdown-item" href="#">Small Household Appliances</a></li>
-                  <li><a class="dropdown-item" href="#">Toys,Pet Supplies, and Office</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Buy Online</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Rebates</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Rewards</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
+     <nav class="navbar navbar-expand-lg navbar-light bg-danger mb-4 mt-0 mt-md-4">
+      <div class="container-fluid flex-row-reverse flex-lg-row">
+
+        <div class="d-flex align-items-center justify-content-between w-75 d-md-none ">
+          <div class="logo w-75 w-md-100">
+            <img class="mw-100" src="imgs/logo.png" alt="logo">
+          </div>
+  
+          <div class="icon-group">
+            <i class="fas fa-phone-alt fs-5"></i>
+            <i class="far fa-envelope  fs-5 ms-3"></i>
           </div>
         </div>
-      </nav>
 
-    <!-- nav bar -->
+        
+        <button class="navbar-toggler border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Department
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Hardware</a></li>
+                <li><a class="dropdown-item" href="#">Paint and Paint Supplies</a></li>
+                <li><a class="dropdown-item" href="#">Electrical</a></li>
+                <li><a class="dropdown-item" href="#">Plumbing</a></li>
+                <li><a class="dropdown-item" href="#">Lawn and Garden</a></li>
+                <li><a class="dropdown-item" href="#">Sporting Goods and Camping</a></li>
+                <li><a class="dropdown-item" href="#">BBQ and Grill</a></li>
+                <li><a class="dropdown-item" href="#">Outdoor Living and Patio</a></li>
+                <li><a class="dropdown-item" href="#">Closeouts</a></li>
+                <li><a class="dropdown-item" href="#">Cleaning and Household Supplies</a></li>
+                <li><a class="dropdown-item" href="#">Automotive</a></li>
+                <li><a class="dropdown-item" href="#">Heating and Cooling</a></li>
+                <li><a class="dropdown-item" href="#">Pool Supplies & Testing</a></li>
+                <li><a class="dropdown-item" href="#">Small Household Appliances</a></li>
+                <li><a class="dropdown-item" href="#">Toys,Pet Supplies, and Office</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Buy Online</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rebates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rewards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+  <!-- nav bar -->
 
     <!-- Supplies -->
 
     <div class="supplies">
 
         <div class="mw-100">
-            <img src="paint_supplies.png" alt="paint" class="w-100">
+            <img src="imgs/paint_supplies.png" alt="paint" class="w-100">
         </div>
         <h1 class="title text-center  p-2">Paint and Paint Supplies Department</h1>
     </div>
@@ -100,65 +114,93 @@
     <div class="paint my-5">
       <div class="container">
         <div class="row">
-          <div class="col-8">
-            <div>
+          <div class=" col-12 col-xl-9">
+        
+            <div id="supplies1">
               <p>Our paint department ranks consistently within the TOP 100 Ace Stores in the country. That's no small achievement and shows how dedicated we are to our customers and the products we carry. We can computer color-match anything you bring us; so go ahead, start that paint project you've been thinking of! We'll be there for you every step of the way!</p>
-              <div><img class="mt-3" src="../liberty_supplies-main/paint.jpg" alt=""></div>
+              <div><img class="mt-3 mw-100" src="imgs/paint.jpg" alt=""></div>
+              <h4 class="fw-bold mt-4">Get a Range of Paint Supplies</h4>
+              <div class="list d-flex  mt-4 mb-5 ps-3 flex-column flex-sm-row">
+                <ul class="p-0 m-0 me-5">
+                  <li>Colorant</li>
+                  <li>Enamels</li>
+                  <li>Exterior paints</li>
+                  <li>Exterior stains</li>
+                  <li>Field and traffic paint</li>
+                  <li>Interior paint</li>
+                  <li>Acrylic sheeting</li>
+                  <li>Brushes, paint, wire</li>
+                  <li>Caulk / sealants / glazing</li>
+                  <li>Caulking guns</li>
+                  <li>Cements / plasters</li>
+                  <li>Compressors</li>
+                  <li>Drop cloths</li>
+                </ul>
+                <ul class="p-0 m-0 me-5">
+                  <li>Glass cutting tools</li>
+                  <li>Glues / adhesives / applicators</li>
+                  <li>Home craft supplies</li>
+                  <li>Knives / scrapers</li>
+                  <li>Ladders: step</li>
+                  <li>Ladders: extension</li>
+                  <li>Ladders: wooden</li>
+                  <li>Ladders: aluminum</li>
+                  <li>Ladders: fiberglass</li>
+                  <li>Lubricants / contact cleaners</li>
+                  <li>Masonry sealers</li>
+                  <li>Paint additives</li>
+                  <li>Paint pads</li>
+                </ul>
+                <ul class="p-0 m-0 ">
+                  <li>Paint rollers</li>
+                  <li>Paint sprayers</li>
+                  <li>Paint, varnish removers</li>
+                  <li>Painter tools / pails / accessories</li>
+                  <li>Power washers</li>
+                  <li>Roof / driveway products</li>
+                  <li>Sandpaper</li>
+                  <li>Solvents / thinners</li>
+                  <li>Steel wool</li>
+                  <li>Tapes</li>
+                  <li>Wall repair compounds / fabrics</li>
+                  <li>Wallpaper / accessories</li>
+                  <li>Wood filler / putty / sticks</li>
+                </ul>
+              </div>
             </div>
-            <h4 class="fw-bold mt-4">Get a Range of Paint Supplies</h4>
-            <div class="list d-flex justify-content-between mt-4">
-              <ul class="p-0 m-0">
-                <li>Colorant</li>
-                <li>Enamels</li>
-                <li>Exterior paints</li>
-                <li>Exterior stains</li>
-                <li>Field and traffic paint</li>
-                <li>Interior paint</li>
-                <li>Acrylic sheeting</li>
-                <li>Brushes, paint, wire</li>
-                <li>Caulk / sealants / glazing</li>
-                <li>Caulking guns</li>
-                <li>Cements / plasters</li>
-                <li>Compressors</li>
-                <li>Drop cloths</li>
-              </ul>
-              <ul class="p-0 m-0">
-                <li>Glass cutting tools</li>
-                <li>Glues / adhesives / applicators</li>
-                <li>Home craft supplies</li>
-                <li>Knives / scrapers</li>
-                <li>Ladders: step</li>
-                <li>Ladders: extension</li>
-                <li>Ladders: wooden</li>
-                <li>Ladders: aluminum</li>
-                <li>Ladders: fiberglass</li>
-                <li>Lubricants / contact cleaners</li>
-                <li>Masonry sealers</li>
-                <li>Paint additives</li>
-                <li>Paint pads</li>
-              </ul>
-              <ul class="p-0 m-0">
-                <li>Paint rollers</li>
-                <li>Paint sprayers</li>
-                <li>Paint, varnish removers</li>
-                <li>Painter tools / pails / accessories</li>
-                <li>Power washers</li>
-                <li>Roof / driveway products</li>
-                <li>Sandpaper</li>
-                <li>Solvents / thinners</li>
-                <li>Steel wool</li>
-                <li>Tapes</li>
-                <li>Wall repair compounds / fabrics</li>
-                <li>Wallpaper / accessories</li>
-                <li>Wood filler / putty / sticks</li>
-              </ul>
+
+            <div id="supplies2" class="d-flex flex-column flex-lg-row justify-content-between d-xl-block" >
+              <div><img class="mt-3 mw-100" src="imgs/paint1_supplies.png" alt=""></div>
+              <div >
+                <h4 class="fw-bold mt-2 mt-xl-4">Interior Paint Varieties</h4>
+                <div class="list d-flex mt-2 mt-xl-4 ps-3 flex-column flex-sm-row">
+                  <ul class="p-0 m-0 me-5">
+                    <li>Interior stain</li>
+                    <li>Specialty paints</li>
+                    <li>Spray paints</li>
+                    <li>Waterproof paints</li>
+                    <li>Wood finishes</li>
+                    <li>Wood preservatives</li>
+                    <li>Varnishes</li>
+                  </ul>
+                  <ul class="p-0 m-0">
+                    <li>Marine paints</li>
+                    <li>Masonry paints</li>
+                    <li>Paint thinners and oils</li>
+                    <li>Polyurethane</li>
+                    <li>Pool paint</li>
+                    <li>Primers</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-4 px-5 text-center">
-            <p class="text-white fs-3 px-3 py-2 bg-secondary">Call us to learn about the paint supplies we stock. <span class="d-block">845-292-4300</span> </p>
-            <p class="fs-6 px-3 py-2 bg-light mt-4 text-dark">All you need to do is sign-up with us to get coupons and giveaways emailed to you on a regular basis.
+
+          <div class=" col-12 col-xl-3 px-2 text-center d-flex flex-wrap d-xl-block">
+            <p class=" text-white fs-3 px-3 py-2 bg-secondary mt-4 w-100 ">Call us to learn about the paint supplies we stock. <span class="d-block">845-292-4300</span> </p>
+            <p class=" fs-6 px-3 py-2 bg-light  text-dark mb-4 w-100">All you need to do is sign-up with us to get coupons and giveaways emailed to you on a regular basis.
               Our store in Liberty, NY is well stocked with all the equipment you may require. <span class="d-block mt-4">Visit Liberty Trading Post now!</span> </p>
-            <div class="mt-4"><img class="w-100" src="../liberty_supplies-main/video.png" alt=""></div>
+            <div class="w-100"><img class="w-100" src="imgs/video.png" alt=""></div>
           </div>
         </div>
       </div>
@@ -166,12 +208,77 @@
 
     <!-- Supplies -->
 
+    <!-- social -->
+
     <div class="title p-2">
       <div class="container d-flex justify-content-between align-items-center ">
           <i class="fab fa-facebook-square fa-2x text-primary"></i>
           <p class="fw-bold fs-4">845-292-4300</p>
       </div>
+    </div>
+    <!-- social -->
+
+     <!-- footer -->
+     <div class="footer bg-dark py-4">
+      <div class="container">
+          <div class=" row text-white">
+              <div class="col-12 col-md-6 col-lg-4 ">
+                  <div>
+                      <h3 class="mb-3">Contact Us</h3>
+                      <ul class="p-0">
+                          <li class="fw-bold">Liberty Trading Post</li>
+                          <li>1966 State Route 52</li>
+                          <li>Liberty, New York 12754</li>
+                          <li>Tel: 845-292-4300</li>
+                      </ul>
+                      <a class="text-white" href="">service@acetradingpost.com</a>
+                  </div>
+                  <div class="d-flex just mt-3">
+                      <i class="fab fa-cc-visa fa-2x me-2"></i>
+                      <i class="fab fa-cc-mastercard fa-2x me-2"></i>
+                      <i class="fab fa-cc-amex fa-2x me-2"></i>
+                      <i class="fab fa-cc-discover fa-2x"></i>
+                  </div>
+                  <div class="mt-4">
+                      <h3 class="mb-3">Find Us</h3>
+                      <div class="w-75 mb-2"><img class="mw-100" src="imgs/map.png" alt=""></div>
+                      <button type="button" class=" btn  btn-danger w-75 mt-2">Learn more</button>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0  ">
+                  <h3 class="mb-3">Send Us A Message</h3>
+                  <div class="w-75">
+                      <label for="firstName" class="form-label">Name :</label>
+                      <input type="text" class="form-control bg-transparent border-2" id="firstName" placeholder="" value="" required="">
+                      
+                    </div>
+                    <div class="w-75">
+                      <label for="firstName" class="form-label mt-3">Email :</label>
+                      <input type="text" class="form-control bg-transparent border-2" id="firstName" placeholder="" value="" required="">
+                      
+                    </div>
+                    <div class="w-75">
+                      <label for="firstName" class="form-label mt-3">Phone :</label>
+                      <input type="text" class="form-control bg-transparent border-2" id="firstName" placeholder="" value="" required="">
+                     
+                    </div>
+                     <div class="w-75 mb-3">
+                      <label for="firstName" class="form-label mt-3">Message :</label>
+                      <textarea class="bg-transparent border-2 border-white w-100" name="" id="" cols="30" rows="10"></textarea>
+                      
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>
+                    <button type="button" class=" btn  btn-danger w-75 mt-3">Send Message</button>
+              </div>
+              <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+                <h3 class="mb-3">Our Facebook Feed</h3>
+                <div><img class="mw-100" src="imgs/social.png" alt=""></div>
+            </div>
+          </div>
+      </div>
   </div>
+  <!-- footer -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

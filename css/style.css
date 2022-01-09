@@ -6,19 +6,12 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
-p{
-    margin-bottom: 0 !important;
-}
-
 a{
     color: black !important;
 }
 
-/* nav bar */
-.navbar-toggler{
-    border-color: black !important;
-}
 
+/* nav bar */
 .nav-item{
     position: relative !important;
     font-weight: 700;
@@ -39,7 +32,7 @@ a{
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
     .nav-item{
         margin: 0 10px !important;
     }
@@ -59,8 +52,29 @@ a{
           border-radius: 10px;
           background-clip: content-box;
     }
+
+    .navbar-expand-lg .navbar-collapse{
+        display: flex!important;
+        flex-basis: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav{
+        flex-direction: row !important;
+    }
+    .navbar-expand-lg .navbar-toggler{display: none;}
 }
+@media (max-width : 768px) {
+
+    nav{
+        background-image: url(../imgs/bg_wood.jpeg) !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+}
+
 /* nav bar */
+
 
 /*Supplies*/
 
